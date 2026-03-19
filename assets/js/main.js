@@ -30,6 +30,16 @@ const initTheme = () => {
         }, 150);
     });
 
+    // Mobile theme toggle
+    const mobileThemeToggle = document.getElementById('mobileThemeToggle');
+    mobileThemeToggle?.addEventListener('click', () => {
+        const currentTheme = html.getAttribute('data-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+
+        html.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+    });
+
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
         if (!localStorage.getItem('theme')) {
             html.setAttribute('data-theme', e.matches ? 'dark' : 'light');
@@ -166,36 +176,6 @@ window.resetForm = () => {
         contactForm.style.display = 'flex';
         formSuccess.classList.remove('show');
     }
-};
-
-// ===== COOKIE BANNER =====
-const initCookieBanner = () => {
-    if (localStorage.getItem('cookiesAccepted')) return;
-
-    const banner = document.createElement('div');
-    banner.className = 'cookie-banner';
-    banner.innerHTML = `
-    <p>We use cookies to enhance your experience and analyze our traffic. <a href="#" style="color:var(--accent-primary);text-decoration:underline">Learn more</a></p>
-    <div class="cookie-buttons">
-      <button class="cookie-btn decline">Decline</button>
-      <button class="cookie-btn accept">Accept All</button>
-    </div>
-  `;
-    document.body.appendChild(banner);
-
-    setTimeout(() => banner.classList.add('show'), 1000);
-
-    const acceptBtn = banner.querySelector('.accept');
-    const declineBtn = banner.querySelector('.decline');
-
-    const hideBanner = (accepted) => {
-        localStorage.setItem('cookiesAccepted', accepted ? 'true' : 'false');
-        banner.classList.remove('show');
-        setTimeout(() => banner.remove(), 400);
-    };
-
-    acceptBtn?.addEventListener('click', () => hideBanner(true));
-    declineBtn?.addEventListener('click', () => hideBanner(false));
 };
 
 // ===== TESTIMONIALS SLIDER =====
@@ -400,7 +380,6 @@ document.addEventListener('DOMContentLoaded', () => {
     animateStats();
     initScrollReveal();
     initContactForm();
-    initCookieBanner();
     updateYear();
     initParticles();
     initHeroSlider();
