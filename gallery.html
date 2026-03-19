@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Gallery - Sound Wave Events Portfolio">
+    <title>Gallery | Sound Wave Events</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Jost:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Navigation (Same as index.html) -->
+    <nav class="glass-nav">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo.png" alt="Sound Wave Events" class="logo-img" />
+                <div class="logo-text">
+                    <span class="logo-line-1">SOUND WAVE</span>
+                    <span class="logo-line-2">EVENTS (PVT) LTD</span>
+                </div>
+            </a>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Our Portfolio</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle">
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"></circle>
+                    </svg>
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+                <a href="contact.html" class="btn-primary btn-talk">Talk to Us <span class="arrow">→</span></a>
+            </div>
+
+            <button class="mobile-toggle" id="mobileToggle">☰</button>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <h1 class="page-title">Our <span class="gradient-text">Gallery</span></h1>
+        <p class="page-subtitle">Showcasing our finest events and productions</p>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="gallery-section">
+        <div class="gallery-filter">
+            <button class="filter-btn active" data-filter="all">All Events</button>
+            <button class="filter-btn" data-filter="corporate">Corporate</button>
+            <button class="filter-btn" data-filter="concert">Concerts</button>
+            <button class="filter-btn" data-filter="wedding">Weddings</button>
+            <button class="filter-btn" data-filter="festival">Festivals</button>
+        </div>
+
+        <div class="gallery-grid">
+            <div class="gallery-item" data-category="corporate">
+                <div class="gallery-image" style="background-image: url('assets/images/gallery/event1.jpg')">
+                    <div class="gallery-overlay">
+                        <h3>Corporate Gala Night</h3>
+                        <p>Annual Awards Ceremony</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="concert">
+                <div class="gallery-image" style="background-image: url('assets/images/gallery/event2.jpg')">
+                    <div class="gallery-overlay">
+                        <h3>Music Festival 2025</h3>
+                        <p>Live Concert Production</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="wedding">
+                <div class="gallery-image" style="background-image: url('assets/images/gallery/event3.jpg')">
+                    <div class="gallery-overlay">
+                        <h3>Luxury Wedding</h3>
+                        <p>Grand Ballroom Setup</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="corporate">
+                <div class="gallery-image" style="background-image: url('assets/images/gallery/event4.jpg')">
+                    <div class="gallery-overlay">
+                        <h3>Tech Conference</h3>
+                        <p>International Summit</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="festival">
+                <div class="gallery-image" style="background-image: url('assets/images/gallery/event5.jpg')">
+                    <div class="gallery-overlay">
+                        <h3>Cultural Festival</h3>
+                        <p>National Celebration</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="concert">
+                <div class="gallery-image" style="background-image: url('assets/images/gallery/event6.jpg')">
+                    <div class="gallery-overlay">
+                        <h3>Rock Concert</h3>
+                        <p>Stadium Event</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="corporate">
+                <div class="gallery-image" style="background-image: url('assets/images/gallery/event7.jpg')">
+                    <div class="gallery-overlay">
+                        <h3>Product Launch</h3>
+                        <p>Brand Activation</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="wedding">
+                <div class="gallery-image" style="background-image: url('assets/images/gallery/event8.jpg')">
+                    <div class="gallery-overlay">
+                        <h3>Destination Wedding</h3>
+                        <p>Beachfront Celebration</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="festival">
+                <div class="gallery-image" style="background-image: url('assets/images/gallery/event9.jpg')">
+                    <div class="gallery-overlay">
+                        <h3>Food Festival</h3>
+                        <p>Culinary Excellence</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Same as index.html) -->
+    <footer class="glass-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <img src="assets/images/logo-footer.png" alt="Sound Wave Events" class="footer-logo-img" />
+                    <span class="footer-tagline">We give you the best</span>
+                </div>
+                <p class="footer-description">Bringing stories to life</p>
+            </div>
+
+            <div class="footer-links-section">
+                <h4>QUICK LINKS</h4>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="gallery.html">Work</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact-section">
+                <h4>QUICK CONTACT</h4>
+                <address>
+                    <p>No: 97 Delkanda,<br />Old Kesbewa Road,<br />Nugegoda 10250,<br />Sri Lanka.</p>
+                    <p>Phone: <a href="tel:+94718933514">+94 71 893 3514</a></p>
+                </address>
+            </div>
+
+            <div class="footer-social-section">
+                <h4>FOLLOW US</h4>
+                <div class="social-icons">
+                    <a href="#" class="social-icon">📘</a>
+                    <a href="#" class="social-icon">📸</a>
+                    <a href="#" class="social-icon">🎵</a>
+                    <a href="#" class="social-icon">▶️</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 SOUND WAVE EVENTS (PVT) LTD. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
